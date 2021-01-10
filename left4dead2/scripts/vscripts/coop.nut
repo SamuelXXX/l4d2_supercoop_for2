@@ -28,9 +28,9 @@ DirectorOptions <-
 	
 	//各类丧尸数量限制，不要删除这些字段，因为有些插件依赖这些字段
 	WitchLimit=24
-	CommonLimit=30
-	cm_MaxSpecials = 8
-	DominatorLimit = 6
+	CommonLimit=10
+	cm_MaxSpecials = 4
+	DominatorLimit = 2
 	BoomerLimit = 4
 	ChargerLimit = 3
 	HunterLimit = 4
@@ -40,7 +40,7 @@ DirectorOptions <-
 	TankLimit=1  //战役模式不希望刷太多克，终局脚本改回来
 
 	//Tank相关设置
-	ZombieTankHealth=RandomInt(12000,20000)
+	ZombieTankHealth=RandomInt(3000,5000)
 	TankHitDamageModifierCoop = RandomInt(1,5)
 
 	//其它设置
