@@ -1,0 +1,43 @@
+#先忽略所有子目录及文件
+/* 
+!/.gitignore
+!/.gitattributes
+
+# 不忽略left4dead2
+!/left4dead2
+
+# 忽略left4dead2所有子目录及文件
+/left4dead2/*
+
+# 设置left4dead中所有的不忽略的子目录及文件
+!/left4dead2/addons/
+!/left4dead2/cfg/
+!/left4dead2/motd.txt
+!/left4dead2/host.txt
+!/left4dead2/scripts/
+
+# addons文件目录忽略文件配置，主要是忽略logs和data可以由程序运行生成的部分
+/left4dead2/addons/sourcemod/logs
+/left4dead2/addons/sourcemod/data
+#忽略所有带有-ignore标记的vpk格式的mod,比如三方图的vpk
+/left4dead2/addons/*-ignore.vpk
+#忽略由mm插件自动生成的mission list文件
+/left4dead2/addons/sourcemod/configs/missioncycle.*.txt
+#忽略debug专用的插件以及插件源代码，比如一键杀死所有特感并统计特感数量的插件
+/left4dead2/addons/sourcemod/plugins/*-debug.smx
+/left4dead2/addons/sourcemod/scripting/*-debug.sp
+
+
+# cfg文件目录配置，只需要sourcemod的配置目录和server_*.cfg类型的服务器参数配置
+/left4dead2/cfg/*
+!/left4dead2/cfg/sourcemod/
+!/left4dead2/cfg/server*.cfg
+!/left4dead2/cfg/banned_user.cfg
+#注意server_debug只是本地调试使用，用来设置各种僵尸血量，不要同步；server_local负责一些服务器自定制属性的配置
+/left4dead2/cfg/server_debug.cfg
+/left4dead2/cfg/server_local.cfg
+
+
+# vscripts文件目录
+/left4dead2/scripts/*
+!/left4dead2/scripts/vscripts/
